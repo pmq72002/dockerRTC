@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  windows:
+    container_name: "sfu-web-rtc"
+    image: "ubuntu"
+    restart: "always"
+    tty: "true"
+    ports:
+      - "3000:3000"
+      - "2000-2020:2000-2020"  
+    volumes:
+      - "./Documents/sfuWebRTC/src:/usr/src"
